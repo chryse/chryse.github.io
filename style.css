@@ -1,0 +1,367 @@
+/* CSS reset */
+body,div,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+	margin:0;
+	padding:0;
+}
+html,body {
+	margin:0;
+	padding:0;
+}
+img { 
+	border:0;
+}
+
+.clearfix {
+	clear: both;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background:url(images/bg.png);
+	font-size: 14px;
+	color: #3a2127;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+}
+
+
+/* Top Style */
+.top {
+	display: block;
+	color:#275974;
+	line-height: 50px;
+	font-size: 0.9em;
+    background: rgba(255, 255, 255, 1.0);
+    padding: 5px 0;
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+	box-shadow: 3px 0px 5px rgba(0,0,0,0.2);
+}
+
+.top div {
+	line-height: 15px;
+	text-align: center;
+	font-family: 'Open Sans Condensed','Arial Narrow', Arial, sans-serif;
+}
+
+.top div a {
+	color: #6b6b6b;
+	-webkit-transition: all ease-in-out 1.0s;
+	-moz-transition: all ease-in-out 1.0s;
+	-o-transition: all ease-in-out 1.0s;
+	-ms-transition: all ease-in-out 1.0s;
+ 	transition: all ease-in-out 1.0s;
+}
+
+.top div a:hover {
+	color: #373737;
+}
+
+.top h1 a {
+	color:#33b0dd;
+	-webkit-transition: all ease-in-out 1.0s;
+	-moz-transition: all ease-in-out 1.0s;
+	-o-transition: all ease-in-out 1.0s;
+	-ms-transition: all ease-in-out 1.0s;
+ 	transition: all ease-in-out 1.0s;
+}
+.top h1 a:hover {
+	color:#0b2f42;
+	
+}
+.top h1 {
+	margin:0 auto;
+	text-align: center;
+	font-weight:bold;
+	font-family: 'Open Sans Condensed','Arial Narrow', Arial, sans-serif;
+	font-size: 3.0em;
+	text-shadow: 2px 2px 0px #F2F2F2, 1px 2px 0px #B1B1B2;
+}
+
+
+.mybody {
+	position: relative;
+	display: block;
+    margin: 0 auto;
+    padding-top: 75px;
+	width: 100%;
+}
+
+.header {
+	padding: 20px 20px 10px 0px;
+	margin: 0 30px;
+	position: relative;
+	display: block;
+}
+.header h1 {
+	position: relative;
+	color: #275973;
+	font-style: normal;
+	padding: 0px 0px 5px 0px;
+	text-shadow: 0px 1px 1px rgba(255,255,255,0.8);
+}
+
+.header p {
+	color: #737373;
+	padding: 0px 5px;
+}
+
+.header h1 strong{
+	font-family: 'Open Sans Condensed','Arial Narrow', Arial, sans-serif;
+	padding:0px 5px 0px 5px;
+	line-height: 35px; 
+	color: #275973;
+	font-size: 1.0em;
+	text-transform: uppercase;
+}
+
+
+
+
+/* Bottom Style */
+
+.bottom {
+	position: relative;
+	text-align: center;
+	font-family: 'Open Sans Condensed','Arial Narrow', Arial, sans-serif;
+	color:#ffffff;
+	line-height: 40px;
+	font-size: 0.9em;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.bottom a{
+	color: #e1e1e1;
+	padding: 5px 5px;
+	border-radius: 5px;
+	-webkit-transition: all ease-in-out 0.3s;
+	-moz-transition: all ease-in-out 0.3s;
+	-o-transition: all ease-in-out 0.3s;
+	-ms-transition: all ease-in-out 0.3s;
+ 	transition: all ease-in-out 0.3s;
+}
+.bottom a:hover{
+	background: #275974;
+}
+
+
+/* Image Grid */
+
+.image_grid {
+	float:left;
+	overflow:hidden;
+	position:relative;
+	padding: 0 30px;
+	text-align: center;
+
+}
+
+.image_grid li {
+	float: left;
+	line-height: 17px;
+	color: #686f74;
+	list-style:none;
+	overflow:hidden;
+	margin-bottom:20px;
+	margin-right:20px;
+	text-align:center;
+}
+
+
+/* Portolio Hover */
+.da-thumbs li,
+.da-thumbs li img {
+	display: block;
+	position: relative;
+	border-radius: 10px;
+}
+.da-thumbs li {
+	overflow: hidden;
+}
+.da-thumbs li article {
+	border-radius: 10px;
+	position: absolute;
+	background-image:url(images/image_hover.png);
+	background-repeat:repeat;
+	width: 100%;
+	height: 100%;
+}
+.da-thumbs li article.da-animate {
+	-webkit-transition: all ease-in-out 0.2s;
+	-moz-transition: all ease-in-out 0.2s;
+	-o-transition: all ease-in-out 0.2s;
+	-ms-transition: all ease-in-out 0.2s;
+	transition: all ease-in-out 0.2s;
+}
+
+/* Initial state classes: */
+.da-slideFromTop {
+	left: 0px;
+	top: -100%;
+}
+.da-slideFromBottom {
+	left: 0px;
+	top: 100%;
+}
+.da-slideFromLeft {
+	top: 0px; 
+	left: -100%;
+}
+.da-slideFromRight {
+	top: 0px;
+	left: 100%;
+}
+
+
+/* Final state classes: */
+.da-slideTop {
+	top: 0px;
+}
+.da-slideLeft {
+	left: 0px;
+}
+.da-thumbs li article a {
+	color:#fff;
+/* 	padding:20px; */
+/* 	display:block; */
+}
+
+.da-thumbs {
+	text-align:center;
+}
+
+.da-thumbs li article h3 {
+	color:#fff;
+	padding-top:40px;
+	padding-bottom: 20px;
+	font-size: 14px;
+}
+
+.da-thumbs li article em{
+	margin-bottom:20px;
+	color:#fff;
+	display:block;
+	font-size: 12px;
+	padding: 0 5px;
+}
+
+.da-thumbs li article span {
+	display:inline-block;
+}
+
+.da-thumbs li article div {
+	display: inline-block;
+}
+
+span.link_post {
+	display:block;
+	width:35px;
+	height:35px;
+	background-color:#DF6232;
+	border-radius:50px;
+	cursor:pointer;
+	background-image:url(images/link_post_icon.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	margin-right:10px;
+}
+
+
+span.zoom{
+	overflow:hidden;
+	display:block;
+	width:35px;
+	height:35px;
+	background-color:#DF6232;
+	border-radius:50px;
+	cursor:pointer;
+	background-image:url(images/zoom_icon.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	/* margin-left:10px; */
+}
+
+
+/* tool tip */
+
+.lightTip {
+	font-size: 1em; 
+	line-height: 20px;
+}
+
+
+.lightTip .content { 
+	width: 250px; 
+	padding: 10px 10px 10px 10px; 
+	border: 6px solid #e2e2e2; 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background: #ffffff; 
+	color: #020202; 
+}
+
+.desc {
+	font-size: 12px;
+}
+
+
+
+
+
+@media all and (max-width: 320px) {
+	.mybody { 
+		padding-top: 10px;
+	}
+	.top {
+		display: block;
+		line-height: 30px;
+		font-size: 0.7em;
+		position: relative;
+		width: 100%;
+		height: 45px;
+		box-shadow: none;
+	}	
+	.top h1 {
+		font-size: 20px;
+	}
+	.bottom {
+		line-height: 20px;
+		font-size: 10px;
+	}
+}
+@media only screen and (min-width: 321px) and (max-width: 768px) {
+	.mybody { 
+		padding-top: 10px;
+	}
+	.top {
+		display: block;
+		line-height: 30px;
+		font-size: 0.8emf;
+		position: relative;
+		width: 100%;
+		height: 45px;
+		box-shadow: none;
+	}
+	.top h1 {
+		font-size: 20px;
+	}
+	.bottom {
+		line-height: 20px;
+		font-size: 10px;
+	}
+}
+@media only screen and (min-width: 769px) and (max-width: 1280px) {
+	.mybody { 
+		width: 80%;
+	}
+}
+@media only screen and (min-width: 1281px) {
+	.mybody {
+		width: 70%;
+	}
+}
