@@ -1,0 +1,23 @@
+<section class="artpiece_detail">
+	
+	<div class="artpiece cf" ng-model="artpieces">
+		<h1>{{artpieces[whichItem].title}}</h1>
+		<div class="info">
+			<img ng-src="images/original/{{artpieces[whichItem].picture}}" alt="Photo of {{artpieces[whichItem].title}}" />
+			<h2>{{artpieces[whichItem].name}}</h2>
+			<h3>Year: {{artpieces[whichItem].year}}</h3>
+			<h4>Medium: {{artpieces[whichItem].medium}}</h4>
+			<p class="bio">{{artpieces[whichItem].description}}</p>
+		</div>
+	</div>
+	
+	<a href="#/details/{{prevItem}}" id="btn-box-left">
+		<span id="btn-box-left-icon"> </span>
+	</a>
+	
+	<a href="#/details/{{nextItem}}" id="btn-box-right">
+		<span id="btn-box-right-icon"> </span>
+	</a>
+	
+	<a href="index.html">&lt&lt Back to search</a>
+</section>
