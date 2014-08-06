@@ -1,14 +1,4 @@
-﻿/***********************************************************/
-/*                    tinyTips Plugin                      */
-/*                      Version: 1.1                       */
-/*                      Mike Merritt                       */
-/*                 Updated: Mar 2nd, 2010                  */
-/***********************************************************/
-
-
-(function($){  
-	$.fn.tinyTips = function (tipColor, supCont) {
-		
+﻿(function($){  	$.fn.tinyTips = function (tipColor, supCont) {
 		if (tipColor === 'null') {
 			tipColor = 'light';
 		} 

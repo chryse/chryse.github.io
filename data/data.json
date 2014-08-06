@@ -1,0 +1,218 @@
+[
+	{
+		"heading_title"			: "Fundamentals of Computing, Coursera Course by Rice University",	
+		"heading_description"	: "Python codes are interpreted by CodeSkulptor and Chrome, Firefox or Safari supports the CodeSkulptor.",
+		"course_title"			: "Interactive Programming in Python",
+		"app_title"				: "Rick Rocks",
+		"app_description"		: " ",
+		"image"					: "python_ricerocks",
+		"link"					: "http://www.codeskulptor.org/#user33_xgwvBeP33N_64.py"
+	},
+	{
+		"heading_title"			: "Fundamentals of Computing, Coursera Course by Rice University",
+		"headding_decription"	: "Python codes are interpreted by CodeSkulptor and Chrome, Firefox or Safari supports the CodeSkulptor.",
+		"course_title"			: "Interactive Programming in Python",
+		"app_title"				: "Blackjack",
+		"app_description"		: " ",
+		"image"					: "python_blackjack",
+		"link"					: "http://www.codeskulptor.org/#user31_xzCoegnLLt_39.py"
+	},
+	{
+		"heading_title"			: "Fundamentals of Computing, Coursera Course by Rice University",
+		"headding_decription"	: "Python codes are interpreted by CodeSkulptor and Chrome, Firefox or Safari supports the CodeSkulptor.",
+		"course_title"			: "Interactive Programming in Python",
+		"app_title"				: "Memory Game",
+		"app_description"		: " ",
+		"image"					: "python_memory",
+		"link"					: "http://www.codeskulptor.org/#user31_rh2SWiwNrd_31.py"
+	},
+	{
+		"heading_title"			: "Fundamentals of Computing, Coursera Course by Rice University",
+		"headding_decription"	: "Python codes are interpreted by CodeSkulptor and Chrome, Firefox or Safari supports the CodeSkulptor.",
+		"course_title"			: "Interactive Programming in Python",
+		"app_title"				: "Pong Game",
+		"app_description"		: " ",
+		"image"					: "python_pong",
+		"link"					: "http://www.codeskulptor.org/#user31_XNo5IOq6om_22.py"
+	},
+	{
+		"heading_title"			: "Fundamentals of Computing, Coursera Course by Rice University",
+		"headding_decription"	: "Python codes are interpreted by CodeSkulptor and Chrome, Firefox or Safari supports the CodeSkulptor.",
+		"course_title"			: "Interactive Programming in Python",
+		"app_title"				: "Stopwatch: The Game",
+		"app_description"		: " ",
+		"image"					: "python_stopwatch",
+		"link"					: "http://www.codeskulptor.org/#user30_pIcdoplLKA_4.py"
+	},
+	{
+		"heading_title"			: "Fundamentals of Computing, Coursera Course by Rice University",
+		"headding_decription"	: "Python codes are interpreted by CodeSkulptor and Chrome, Firefox or Safari supports the CodeSkulptor.",
+		"course_title"			: "Interactive Programming in Python",
+		"app_title"				: "Rock Paper Scissors Lizard Spock",
+		"app_description"		: " ",
+		"image"					: "python_rpsls",
+		"link"					: "http://www.codeskulptor.org/#user30_cq7Z5IWydd_31.py"
+	},
+	{
+		"heading_title"			: "Fundamentals of Computing, Coursera Course by Rice University",
+		"headding_decription"	: "Python codes are interpreted by CodeSkulptor and Chrome, Firefox or Safari supports the CodeSkulptor.",
+		"course_title"			: "Interactive Programming in Python",
+		"app_title"				: "Guess the number",
+		"app_description"		: " ",
+		"image"					: "python_guess_the_number",
+		"link"					: "http://www.codeskulptor.org/#user29_QXIZSd7hlD_25.py"
+	},
+	{
+		"heading_title"			: "Interactive Design in Northeastern University",
+		"headding_decription"	: " ",
+		"course_title"			: "Thesis Project",
+		"app_title"				: "V-MFA",
+		"app_description"		: " ",
+		"image"					: "vmfa",
+		"link"					: "http://www.hyunjunkim.com/as3/vmfa/"
+	},
+	{
+		"heading_title"			: "Interactive Design in Northeastern University",
+		"headding_decription"	: " ",
+		"course_title"			: "Interactive Information Design I",
+		"app_title"				: "A Guide for New Immigrants to America",
+		"app_description"		: " ",
+		"image"					: "iid1",
+		"link"					: "http://hyunjunkim.com/as3/iid1/"
+	},
+	{
+		"heading_title"			: "Interactive Design in Northeastern University",
+		"headding_decription"	: " ",
+		"course_title"			: "Interactive Information Design II",
+		"app_title"				: "Study of Interactive Media in Fine Art",
+		"app_description"		: " ",
+		"image"					: "iid2",
+		"link"					: "http://hyunjunkim.com/as3/iid2/"
+	},
+	{
+		"heading_title"			: "Interactive Design in Northeastern University",
+		"headding_decription"	: " ",
+		"course_title"			: "Intermediate Programming for Digital Media",
+		"app_title"				: "Basketball Ver. 2",
+		"app_description"		: " ",
+		"image"					: "imp",
+		"link"					: "http://hyunjunkim.com/as3/basketballv2/"
+	},
+	{
+		"heading_title"			: "Interactive Design in Northeastern University",
+		"headding_decription"	: " ",
+		"course_title"			: "Programming Foundations for Digital Media",
+		"app_title"				: "Basketball Ver. 1",
+		"app_description"		: " ",
+		"image"					: "fmp",
+		"link"					: "http://hyunjunkim.com/as3/basketballv1/"
+	},
+	{
+		"heading_title"			: "Interactive Design in Northeastern University",
+		"headding_decription"	: " ",
+		"course_title"			: "Intermediate Programming for Digital Media",
+		"app_title"				: "Catch Balls",
+		"app_description"		: " ",
+		"image"					: "as3_catch",
+		"link"					: "http://hyunjunkim.com/as3/catch/"
+	},
+	{
+		"heading_title"			: "Interactive Design in Northeastern University",
+		"headding_decription"	: " ",
+		"course_title"			: "Foundations of Digital Storytelling",
+		"app_title"				: "Cirque de Evil",
+		"app_description"		: " ",
+		"image"					: "st",
+		"link"					: "http://www.hyunjunkim.com/as3/storytelling/"
+	},
+	{
+		"heading_title"			: "Interactive Design in Northeastern University",
+		"headding_decription"	: " ",
+		"course_title"			: "Time-Based Media",
+		"app_title"				: "The Journey of Luffy",
+		"app_description"		: " ",
+		"image"					: "tm",
+		"link"					: "http://www.hyunjunkim.com/as3/The_Journey_of_Luffy_v1.6.zip/"
+	},
+	{
+		"heading_title"			: "UX/UI Mockups",
+		"headding_decription"	: " ",
+		"course_title"			: "Parrotutor",
+		"app_title"				: "Mockup for Chinese English Dictionary Apple App",
+		"app_description"		: " ",
+		"image"					: "mockup_parrotutor",
+		"link"					: "doc/parrotutor.pdf"
+	},
+	{
+		"heading_title"			: "UX/UI Mockups",
+		"headding_decription"	: " ",
+		"course_title"			: "Redesign Website",
+		"app_title"				: " ",
+		"app_description"		: " ",
+		"image"					: "mockup_boston_temple",
+		"link"					: "doc/redesign.pdf"
+	},
+	{
+		"heading_title"			: "Websites",
+		"headding_decription"	: " ",
+		"course_title"			: "Website Building",
+		"app_title"				: "Won Acupuncture & Herbs",
+		"app_description"		: " ",
+		"image"					: "won_acu",
+		"link"					: "http://acupuncture.wondharmacenter.org"
+	},
+	{
+		"heading_title"			: "Websites",
+		"headding_decription"	: " ",
+		"course_title"			: "Website Building",
+		"app_title"				: "Won Dharma Meditation & Retreat Center",
+		"app_description"		: " ",
+		"image"					: "wdc",
+		"link"					: "http://wondharmacenter.org"
+	},
+	{
+		"heading_title"			: "Websites",
+		"headding_decription"	: " ",
+		"course_title"			: "Website Building",
+		"app_title"				: "Paul Chaleff Studio",
+		"app_description"		: " ",
+		"image"					: "paulchaleff",
+		"link"					: "http://paulchaleff.com"
+	},
+	{
+		"heading_title"			: "Websites",
+		"headding_decription"	: " ",
+		"course_title"			: "Website Building",
+		"app_title"				: "Won Buddhism of Boston",
+		"app_description"		: " ",
+		"image"					: "won_boston",
+		"link"					: "http://boston.wonbuddhism.org"
+	},
+	{
+		"heading_title"			: "Websites",
+		"headding_decription"	: " ",
+		"course_title"			: "Website Building",
+		"app_title"				: "Won Buddhism of Manhattan",
+		"app_description"		: " ",
+		"image"					: "won_nyc",
+		"link"					: "http://nyc.wonbuddhism.org"
+	},
+	{
+		"heading_title"			: "Websites",
+		"headding_decription"	: " ",
+		"course_title"			: "Website Building",
+		"app_title"				: "Won Buddhism of Houston",
+		"app_description"		: " ",
+		"image"					: "won_houston",
+		"link"					: "http://houston.wonbuddhism.org"
+	},
+	{
+		"heading_title"			: "Websites",
+		"headding_decription"	: " ",
+		"course_title"			: "Website Building",
+		"app_title"				: "Dosung Yoo",
+		"app_description"		: " ",
+		"image"					: "dosungyoo",
+		"link"					: "http://dosungyoo.com"
+	}
+]
