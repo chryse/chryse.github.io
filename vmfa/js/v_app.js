@@ -1,7 +1,4 @@
-var vApp = angular.module('vmfa', [
-	'ngRoute',
-	'artpieceControllers'
-]);
+var vApp = angular.module('vmfa', ['ngRoute', 'artpieceControllers']);
 
 vApp.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.

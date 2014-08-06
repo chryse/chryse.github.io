@@ -1,36 +1,41 @@
 <section class="artpiecepage">
 	
 	<div class="search">
-			<h1>V-Museum of Fine Art</h1>
-			<label>search: </label>
-			<input ng-model="query" placeholder="Search..." autofocus>
+		<h1>V-Museum of Fine Art</h1>
+		<label>search: </label>
+		<input ng-model="query" placeholder="Search..." autofocus>
+		
+		<label class="formgroup">By:
+			<select ng-model="artpieceOrder">
+				<option value="name">Name</option>
+				<option value="title">Title</option>
+				<option value="year">Year</option>
+				<option value="nationality">Nationality</option>
+			</select>
+		</label>
 			
-			<label class="formgroup">By:
-				<select ng-model="artpieceOrder">
-					<option value="name">Name</option>
-					<option value="title">Title</option>
-					<option value="year">Year</option>
-					<option value="nationality">Nationality</option>
-				</select>
-			</label>
-			
-			<label class="formgroup">
-				<input ng-model="direction" type="radio" name="direction" checked>ascending
-			</label>
-			<label class="formgroup">
-				<input ng-model="direction" type="radio" name="direction" value="reverse">descending
-			</label>
-		</div>
-		<ul class="artpiece_list">
-			<li ng-animate="'animate'" class="artpiece cf" ng-repeat="item in artpieces | limitTo : 100 | filter: query | orderBy: artpieceOrder:direction">
-				<a href="#/details/{{artpieces.indexOf(item)}}">
-					<img ng-src="images/thumbs/{{item.picture}}" alt="{{item.title}}"
-					<div>
-						<h2>{{item.title}}</h2>
-						<h3>{{item.name | uppercase}}</h3>
-						<p>{{item.year}}, {{item.nationality}}</p>
-					</div>
-				</a>
-			</li>
-		</ul>
+		<label class="formgroup">
+			<input ng-model="direction" type="radio" name="direction" checked>ascending
+		</label>
+		
+		<label class="formgroup">
+			<input ng-model="direction" type="radio" name="direction" value="reverse">descending
+		</label>
+	</div>
+	<ul class="artpiece_list">
+		<li ng-animate="'animate'" class="artpiece cf" ng-repeat="item in artpieces | limitTo : artpieces.length | filter: query | orderBy: artpieceOrder:direction">
+			<tt>{{$index + 1}}</tt>
+			<a href="#/details/{{artpieces.indexOf(item)}}">
+				<img ng-src="images/thumbs/{{item.picture}}" alt="{{item.title}}"
+				<div>
+					<h2>{{item.title}}</h2>
+					<h3>{{item.name | uppercase}}, {{item.nationality}}</h3>
+					<p>{{item.classification}}, {{item.type}}, {{item.year}}</p>
+				</div>
+			</a>
+		</li>
+		<li ng-animate="'animate'" class="artpiece cf" ng-if="results.length == 0">
+      <strong>No results found...</strong>
+    </li>
+	</ul>
 </section>
