@@ -5,6 +5,7 @@ artpieceControllers.controller('ListController',['$scope', '$http', function($sc
 	$http.get('data/data.json').success(function(data) {
 		$scope.artpieces = data;
 		$scope.artpieceOrder = 'name';
+		$scope.query = "impressionism";
 	});
 }]);
 
