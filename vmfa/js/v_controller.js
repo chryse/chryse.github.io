@@ -14,14 +14,14 @@ artpieceControllers.controller('DetailsController', ['$scope', '$http', '$routeP
 		$scope.artpieces = data;
 		$scope.whichItem = $routeParams.itemId;
 		console.log($routeParams);
-		
+
 		if ($routeParams.itemId > 0) {
 			$scope.prevItem = Number($routeParams.itemId) -1;
 		}
 		else {
 			$scope.prevItem = $scope.artpieces.length -1;
 		}
-		
+
 		if ($routeParams.itemId < $scope.artpieces.length -1) {
 			$scope.nextItem = Number($routeParams.itemId) +1;
 		}
