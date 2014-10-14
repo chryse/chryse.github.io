@@ -1,6 +1,6 @@
-var vApp = angular.module('vmfa', ['ngRoute', 'artpieceControllers']);
+var vMfa = angular.module('vmfa', ['ngRoute', 'artpieceControllers']);
 
-vApp.config(['$routeProvider', function($routeProvider) {
+vMfa.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.
 	when('/list', {
 		templateUrl: 'partials/list.html',
