@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="neonSign">
 <head>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,14 +19,105 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ios-icon-ipad.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ios-icon-iphone4.png">
 
-		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-
-		<!-- Custom Fonts -->
+    <!-- Custom Styles -->
+    <!-- <link href="css/custom.css" rel="stylesheet"> -->
+    <link href="css/ngstyle.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+ 
+	<!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Slackey' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Geo' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Warnes' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-</head>
-<body>
-	<input type="text"/>
-	<button>Enter</button>
 
+    
+    <!-- AngularJS CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.2.26/angular-route.js"></script>
+
+    <script>
+        angular.module("neonSign", ["ngRoute"])
+        // .config(function($routeProvider) {
+        //     $routeProvider.when("/complete", {
+        //         templateUrl: "views/showcase.html"
+        //     });
+        //     $routeProvider.otherwise({
+        //         templateUrl: "index.html"
+        //     });
+        // })
+        .controller("neonCtrl", function($scope) {
+            $scope.switchScreen = false;
+            $scope.inputInfo = [];
+            $scope.styleList = [
+                { fontStyle: "sans", effect: "neon1" },
+                { fontStyle: "muli", effect: "neon2" },
+                { fontStyle: "warnes", effect: "neon3" }
+            ]; 
+
+            $scope.submitSetting = function(input) {
+                if (angular.isDefined(input.text) && angular.isDefined(input.font) && angular.isDefined(input.effect)){
+                    console.log("text:" + input.text + " font:" + input.font + " effect:" + input.effect);
+                    $scope.switchScreen = true;
+                    // $location.path("/complete");
+                    console.log($scope.switchScreen);
+                }
+                else {
+                    console.log("input error");
+                }
+            };
+
+            $scope.getError = function(error) {
+                if (angular.isDefined(error)) {
+                    if (error.required) {
+                        return "Please type your message";
+                    }
+                }
+            }
+        });
+    </script>
+</head>
+<body id="neon" ng-controller="neonCtrl">
+    <header class="header" ng-hide="switchScreen">  
+        <h1 class="logo">Neo Sign</h1>
+    </header>
+    <section id="inputSection" ng-hide="switchScreen">
+        <div class="screen">
+            <form name="neonSettingForm" role="form" novalidate ng-submit="submitSetting(inputInfo)">
+                <input name="inputText" type="text" class="form-control" id="message" placeholder="Type your message" ng-model="inputInfo.text" required>
+                <div class="error" ng-show="neonSettingForm.inputText.$invalid && neonSettingForm.inputText.$dirty">
+                    {{getError(neonSettingForm.inputText.$error)}}
+                </div>
+                        
+                            <select ng-model="inputInfo.font" ng-options="item.fontStyle as item.fontStyle for item in styleList" required>
+                                <option value="">Select Font</option>
+                            </select>
+                            <select class="form-group" ng-model="inputInfo.effect" ng-options="item.effect as item.effect for item in styleList" required>
+                                <option value="">Select Effect</option>
+                            </select>
+                        
+                            <button type="submit" class="" ng-disabled="neonSettingForm.$invalid">Submit</button>
+                        
+            </form>
+        </div>
+
+                <!-- <div class="col-xs-12">
+                    <div class="well" style="color: black;">
+                        <p ng-class="inputInfo.font"><span ng-class="inputInfo.effect">{{inputInfo.text}}</span></p>
+                        <p>Selected Font Style: <br />{{inputInfo.font}}</p>
+                        <p>Selected Effect: <br />{{inputInfo.effect}}</p>
+                    </div>
+                </div> -->
+        
+    </section>
+
+    <section class="outputSection text-center v-center" ng-show="switchScreen">
+        <div class="row">
+            <div class="col-xs-12">
+                <div ng-class="inputInfo.effect" class="marquee"><span ng-class="inputInfo.font">{{inputInfo.text}}</span></div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
