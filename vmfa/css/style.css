@@ -88,6 +88,7 @@ body  {
   font-family: Merriweather, serif;
   font-size: 1rem;
   line-height: 160%;
+  color: #0F4150;
   /**zoom: 1; */
 }
 
@@ -109,6 +110,11 @@ h1 {
 	font-size: 2.2rem;
 	line-height: 100%;
 	margin-bottom: 10px;
+}
+
+h1 a {
+  color: inherit;
+  text-decoration: none;
 }
 
 h2 {
@@ -299,7 +305,7 @@ a.small {
   max-width: 100%;
   margin: 0 auto;
   margin-bottom: 30px;
-  border-radius: 0 0 20px 20px;
+  /*border-radius: 0 0 20px 20px; */
   opacity: .95;
   z-index: 0;
 }
@@ -322,7 +328,7 @@ a.small {
 }
 
 .artpiece_list li:last-child {
-	border-radius: 0 0 20px 20px;
+	/* border-radius: 0 0 20px 20px; */
 }
 
 .artpiece_list li:hover {
@@ -341,10 +347,12 @@ a.small {
 
 .artpiece_list li:hover {
 	background: #FDF6E3;
+  /*
 	-webkit-transform: scale(1.005);
 	-moz-transform: scale(1.005);
 	-ms-transform: scale(1.005);
 	transform: scale(1.005);
+  */
 }
 
 .artpiece.ng-enter.ng-enter-active,
@@ -434,4 +442,10 @@ a.small {
 
 .footer a:hover {
 	background: #275974;
+}
+
+/* Detail page item count */
+.counts {
+  display: block;
+  float: right;
 }

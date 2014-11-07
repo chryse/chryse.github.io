@@ -1,6 +1,7 @@
 <section class="artpiece_detail">
 
 	<div class="artpiece cf" ng-model="artpieces">
+		<div class="counts">{{currentItemNumber}} / {{artpieces.length}}</div>
 		<h1>{{artpieces[whichItem].title}}</h1>
 		<div class="info">
 			<img ng-src="images/original/{{artpieces[whichItem].picture}}" alt="Photo of {{artpieces[whichItem].title}}" />
@@ -19,5 +20,5 @@
 		<span id="btn-box-right-icon"> </span>
 	</a>
 
-	<a href="index.html">&lt&lt Back to search</a>
+	<a class="atFirst" href="index.html">&lt&lt Back to search</a>
 </section>
