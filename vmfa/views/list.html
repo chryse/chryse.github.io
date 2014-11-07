@@ -30,7 +30,7 @@
 		<li ng-animate="'animate'" class="artpiece cf" ng-if="results.length != artpieces.length && results.length != 0">
 			<strong>{{results.length}} items were searched.</strong>
 		</li>
-		<li ng-animate="'animate'" class="artpiece cf" ng-repeat="item in results = (artpieces | limitTo : artpieces.length | filter: query | orderBy: listOrder:direction)">			
+		<li ng-animate="'animate'" class="artpiece cf" ng-repeat="item in results = (artpieces | limitTo : artpieces.length | filter: query | orderBy: listOrder:direction)">
 			<span>{{$index + 1}}</span>
 			<a href="#/details/{{$index}}" ng-click="getData($index)">
 				<img ng-src="images/thumbs/{{item.picture}}" alt="{{item.title}}"
@@ -41,6 +41,6 @@
 				</div>
 			</a>
 		</li>
-		
+
 	</ul>
 </section>

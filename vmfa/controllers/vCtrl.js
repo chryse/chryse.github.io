@@ -5,7 +5,7 @@ angular.module('artpiecesCtrls', ['ngAnimate'])
 })
 
 .controller('listCtrl', ['$scope', '$http', 'itemsFiltered', function($scope, $http, itemsFiltered) {
-	
+
 	$http.get('data/data.json').success(function(data) {
 		$scope.artpieces = data;
 		//$scope.artpieceOrder = 'name';
@@ -17,7 +17,7 @@ angular.module('artpiecesCtrls', ['ngAnimate'])
 }])
 
 .controller('detailsCtrl', ['$scope', '$routeParams', 'itemsFiltered', function($scope, $routeParams, itemsFiltered) {
-	
+
 	$scope.artpieces = itemsFiltered.results;
 	$scope.whichItem = $routeParams.itemId;
 	$scope.currentItemNumber = Number($scope.whichItem) + 1;
