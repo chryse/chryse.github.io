@@ -1,18 +1,29 @@
 angular.module('artpiecesCtrls', ['ngAnimate'])
 
+//For Global Access
 .service("itemsFiltered", function() {
 	this.results = new Array();
+	this.query = "";
+	this.listOrder = "";
+	this.direction = "";
 })
 
 .controller('listCtrl', ['$scope', '$http', 'itemsFiltered', function($scope, $http, itemsFiltered) {
 
 	$http.get('data/data.json').success(function(data) {
 		$scope.artpieces = data;
-		//$scope.artpieceOrder = 'name';
-		//$scope.query = "impressionism";
+		$scope.artpieceOrder = itemsFiltered.query;
 	});
+
+	$scope.query = itemsFiltered.query;
+	$scope.listOrder = itemsFiltered.listOrder;
+	$scope.direction = itemsFiltered.direction;
+
 	$scope.getData = function() {
 		itemsFiltered.results = $scope.results;
+		itemsFiltered.query = $scope.query;
+		itemsFiltered.listOrder = $scope.listOrder;
+		itemsFiltered.direction = $scope.direction;
 	}
 }])
 
@@ -35,4 +46,5 @@ angular.module('artpiecesCtrls', ['ngAnimate'])
 	else {
 		$scope.nextItem = 0;
 	}
+
 }]);
