@@ -1,9 +1,9 @@
-<section class="artpiece_detail">
+<section class="artpiece-detail">
 
-	<div class="artpiece cf" ng-model="artpieces">
+	<div ng-model="artpieces">
 		<div class="counts">{{currentItemNumber}} / {{artpieces.length}}</div>
 		<h1>{{artpieces[whichItem].title}}</h1>
-		<div class="info">
+		<div class="detail-info">
 			<img ng-src="images/original/{{artpieces[whichItem].picture}}" alt="Photo of {{artpieces[whichItem].title}}" />
 			<h2>{{artpieces[whichItem].name}}</h2>
 			<h3>Year: {{artpieces[whichItem].year}}</h3>

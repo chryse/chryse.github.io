@@ -9,7 +9,7 @@ angular.module('artpiecesCtrls', ['ngAnimate'])
 	$http.get('data/data.json').success(function(data) {
 		$scope.artpieces = data;
 		//$scope.artpieceOrder = 'name';
-		$scope.query = "impressionism";
+		//$scope.query = "impressionism";
 	});
 	$scope.getData = function() {
 		itemsFiltered.results = $scope.results;
@@ -20,7 +20,7 @@ angular.module('artpiecesCtrls', ['ngAnimate'])
 
 	$scope.artpieces = itemsFiltered.results;
 	$scope.whichItem = $routeParams.itemId;
-	$scope.currentItemNumber = Number($scope.whichItem) + 1;
+	$scope.currentItemNumber = Number($scope.whichItem) +1;
 
 	if ($routeParams.itemId > 0 ) {
 		$scope.prevItem = Number($routeParams.itemId -1);

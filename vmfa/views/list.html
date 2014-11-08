@@ -1,13 +1,12 @@
 <section class="artpiecepage">
 
 	<div class="search">
-		<h1><a href="#">V-Museum of Fine Art</a></h1>
 		<label>search: </label>
 		<input ng-model="query" placeholder="Search..." autofocus>
 
 		<label class="formgroup">By:
 			<select ng-model="listOrder">
-				<option value="">Filter</option>
+				<option value="">Filter Options</option>
 				<option value="name">Name</option>
 				<option value="title">Title</option>
 				<option value="year">Year</option>
@@ -31,9 +30,10 @@
 			<strong>{{results.length}} items were searched.</strong>
 		</li>
 		<li ng-animate="'animate'" class="artpiece cf" ng-repeat="item in results = (artpieces | limitTo : artpieces.length | filter: query | orderBy: listOrder:direction)">
-			<span>{{$index + 1}}</span>
 			<a href="#/details/{{$index}}" ng-click="getData($index)">
-				<img ng-src="images/thumbs/{{item.picture}}" alt="{{item.title}}"
+				<div class="img-container">
+					<img ng-src="images/thumbs/{{item.picture}}" alt="{{item.title}}">
+				</div>
 				<div>
 					<h2>{{item.title}}</h2>
 					<h3>{{item.name | uppercase}}, {{item.nationality}}</h3>
