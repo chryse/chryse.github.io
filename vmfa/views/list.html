@@ -23,6 +23,9 @@
 		</label>
 	</div>
 	<ul class="artpiece_list">
+		<li ng-animate="'animate'" class="artpiece cf" ng-if="dataError">
+			Can't retrieve data...
+		</li>
 		<li ng-animate="'animate'" class="artpiece cf" ng-if="results.length == 0">
 			No results found...
 		</li>

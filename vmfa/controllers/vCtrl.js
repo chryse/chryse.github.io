@@ -13,6 +13,9 @@ angular.module('artpiecesCtrls', ['ngAnimate'])
 	$http.get('data/data.json').success(function(data) {
 		$scope.artpieces = data;
 		$scope.artpieceOrder = itemsFiltered.query;
+	})
+	.error(function() {
+		$scope.dataError = true;
 	});
 
 	$scope.query = itemsFiltered.query;
@@ -25,6 +28,8 @@ angular.module('artpiecesCtrls', ['ngAnimate'])
 		itemsFiltered.listOrder = $scope.listOrder;
 		itemsFiltered.direction = $scope.direction;
 	}
+
+	console.log($scope.direction);
 }])
 
 .controller('detailsCtrl', ['$scope', '$routeParams', 'itemsFiltered', function($scope, $routeParams, itemsFiltered) {
