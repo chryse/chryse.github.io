@@ -1,0 +1,30 @@
+<div id="main">
+	<div class="screen" id="splash-screen">
+		<h1 class="logo">Tip, Tax<br />Calculator</h1>
+		<div class="input-box">
+			Price:
+			<input class="form-control" ng-model="price" placeholder="Put price"><br />
+		</div>
+		<div class="input-box">
+			Tax(%):
+			<input class="form-control" ng-model="tax" placeholder="Put tax rate"><br />
+		</div>
+		<div class="input-box">
+			Tip(%):
+			<select class="form-control" ng-model="tip" ng-options="tip for tip in tipGroup">
+				<option value="">Pick One</option>
+			</select>
+
+		</div>
+		<div class="output-box">
+			
+				Result:
+			
+			
+				Total: <span eval-tax-tip amount="price" tax="tax" tip="tip"></span><br/>
+				Tip: <span eval-tip-cost amount="price" tip="tip"></span>
+			
+		</div>
+	</div>
+	
+</div>
