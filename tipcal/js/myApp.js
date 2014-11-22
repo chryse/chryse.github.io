@@ -42,6 +42,10 @@ angular.module("myApp", ["ngRoute"])
 				var localData = { taxCost: Number(scope.amount) * Number(newValue) / 100 }
 				element.text(expressionFn(scope, localData));
 			});
+			scope.$watch("amount", function(newValue) {
+				var localData = { taxCost: Number(newValue) * Number(scope.tax) / 100 }
+				element.text(expressionFn(scope, localData));
+			});
 		}
 	}
 })
@@ -65,13 +69,15 @@ angular.module("myApp", ["ngRoute"])
 	console.log("working");
 })
 .controller("mainCtrl", function($scope) {
-	$scope.tipGroup = ["5", "10", "15", "20", "25", "30"];
-	$scope.taxGroup = {
-		California: "7.5",
-		NewYork: "4",
-		Massachusetts: "6.25",
-		Nevada: "6.85"
-	}
+	// $scope.tipGroup = ["5", "10", "15", "20", "25", "30"];
+	$scope.tipGroup = [
+		{tiprate: "5%", tip: 5},
+		{tiprate: "10%", tip: 10},
+		{tiprate: "15%", tip: 15},
+		{tiprate: "20%", tip: 20},
+		{tiprate: "25%", tip: 25},
+		{tiprate: "30%", tip: 30}
+	]
 	$scope.price = "";
 	$scope.tax = "";
 	$scope.tip = "";

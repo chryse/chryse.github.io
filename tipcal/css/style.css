@@ -14,7 +14,7 @@ a:active, a:hover, a:focus {
 	left: 0;
 	top: 0;
 	width: 320px;
-	height: 480px;
+	height: 100%;
 	background-color: rgb(30, 30, 30);
 	font-family: 'Gloria Hallelujah', cursive;
 	color: rgb(200, 200, 200);

@@ -11,8 +11,8 @@
 		</div>
 		<div class="input-box">
 			Tip(%):
-			<select class="form-control" ng-model="tip" ng-options="tip for tip in tipGroup">
-				<option value="">Pick One</option>
+			<select class="form-control" ng-model="tip" ng-options="tip.tip as tip.tiprate for tip in tipGroup">
+				<option value="">Pick tip rate(%)</option>
 			</select>
 
 		</div>
