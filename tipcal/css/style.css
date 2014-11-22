@@ -9,6 +9,16 @@ a:active, a:hover, a:focus {
 	color: inherit;
 }
 
+input.ng-invalid.ng-dirty,
+option.ng-invalid.ng-dirty {
+	background-color: #ff8181;
+}
+
+input.ng-valid.ng-dirty,
+select.ng-valid.ng-dirty {
+	background-color: #4fb9fc;
+}
+
 #main {
 	position: absolute;
 	left: 0;
