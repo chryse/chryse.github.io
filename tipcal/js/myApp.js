@@ -33,6 +33,18 @@ angular.module("myApp", ["ngRoute"])
 				}
 			};
 		})
+.directive("evalTaxCost", function($parse) {
+	var expressionFn = $parse("taxCost | currency");
+	return {
+		scope: { amount: "=amount", tax: "=tax" },
+		link: function(scope, element, attrs) {
+			scope.$watch("tax", function(newValue) {
+				var localData = { taxCost: Number(scope.amount) * Number(newValue) / 100 }
+				element.text(expressionFn(scope, localData));
+			});
+		}
+	}
+})
 .directive("evalTipCost", function($parse) {
 	var expressionFn = $parse("tipCost | currency");
 	return {
