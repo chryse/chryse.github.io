@@ -22,7 +22,7 @@ option.ng-invalid.ng-dirty {
 
 input.ng-valid.ng-dirty,
 select.ng-valid.ng-dirty {
-	background-color: #4fb9fc;
+	background-color: #6C9517;
 }
 
 #main {
@@ -33,7 +33,7 @@ select.ng-valid.ng-dirty {
 	height: 480px;
 	background-color: rgb(30, 30, 30);
 	font-family: 'Gloria Hallelujah', cursive;
-	color: rgb(200, 200, 200);
+	color: #d2d2d2;
 }
 
 #main .screen {
@@ -51,7 +51,6 @@ select.ng-valid.ng-dirty {
 
 #main .output-box {
 	padding: 20px;
-	margin-top: 20px;
 }
 
 #splash-screen {
@@ -70,7 +69,7 @@ select.ng-valid.ng-dirty {
 	line-height: 40px;
 	margin: 0;
 	text-align: center;
-	color: #00a15b;
+	color: #18767D;
 	text-shadow: 1px 1px 2px rgb(255, 255, 0),
 				-1px -1px 2px rgb(255, 255, 0),
 				5px 8px 8px rgb(0, 0, 0);
@@ -81,5 +80,25 @@ select.ng-valid.ng-dirty {
 }
 
 .result {
-	color: rgb(10, 10, 10);
+	color: #ffffff;
+	font-size: 1.2em;
+	margin: 0.3em auto;
+	width: 100%;
+	list-style-type: none;
+}
+
+.result span {
+	color: #6C9517;
+}
+
+div.div1, div.div2 {
+	float:left;
+}
+div.div1 {
+	width: 20%;
+	text-align: right;
+}
+div.div2 {
+	width: 80%;
+	padding-left: 1em;
 }
