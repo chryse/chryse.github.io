@@ -55,8 +55,7 @@ select.ng-valid.ng-dirty {
 }
 
 #splash-screen {
-	/*text-align: center;*/
-	padding-top: 10px;
+	padding-top: 20px;
 }
 
 #splash-screen .continue {

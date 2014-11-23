@@ -5,9 +5,9 @@
 	height: 100%;
 }
 @media (max-device-width: 480px) {
-	#main { font-size: 30px; }
+	/*#main { font-size: 30px; }*/
 }
 
 @media (max-device-width: 768px) {
-	#main { font-size: 30px; }
+	/*#main { font-size: 30px; }*/
 }
