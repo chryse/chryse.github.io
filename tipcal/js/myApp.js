@@ -1,5 +1,5 @@
 angular.module("myApp", ["ngRoute"])
-.config(["$routeProvider", function($routeProvider) {
+.config(function($routeProvider) {
 	$routeProvider
 	.when("/home", {
 		templateUrl: "views/home.html",
@@ -12,7 +12,7 @@ angular.module("myApp", ["ngRoute"])
 	.otherwise({
 		redirectTo: "/home"
 	});
-}])
+})
 .directive("evalTaxTip", function($parse) {
 			var expressionFn = $parse("total | currency");
 			return {
