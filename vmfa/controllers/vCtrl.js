@@ -1,14 +1,6 @@
 angular.module('artpiecesCtrls', ['ngAnimate'])
 
-//For Global Access
-.service("itemsFiltered", function() {
-	this.results = new Array();
-	this.query = "";
-	this.listOrder = "";
-	this.direction = "";
-})
-
-.controller('listCtrl', ['$scope', '$http', 'itemsFiltered', function($scope, $http, itemsFiltered) {
+.controller('listCtrl', function($scope, $http, itemsFiltered, artListPageCount) {
 
 	$http.get('data/data.json').success(function(data) {
 		$scope.artpieces = data;
@@ -18,21 +10,34 @@ angular.module('artpiecesCtrls', ['ngAnimate'])
 		$scope.dataError = true;
 	});
 
+
 	$scope.query = itemsFiltered.query;
 	$scope.listOrder = itemsFiltered.listOrder;
 	$scope.direction = itemsFiltered.direction;
 
+	// store filtered daat for next page
 	$scope.getData = function() {
 		itemsFiltered.results = $scope.results;
 		itemsFiltered.query = $scope.query;
 		itemsFiltered.listOrder = $scope.listOrder;
 		itemsFiltered.direction = $scope.direction;
+	};
+
+	// item singular and plural check
+	$scope.itemsString = function() {
+		if ($scope.results.length === 1) { return "item was"; }
+		else { return "items were"; }
 	}
 
-	console.log($scope.direction);
-}])
+	$scope.selectedPage = 1;
+	$scope.pageSize = artListPageCount;
 
-.controller('detailsCtrl', ['$scope', '$routeParams', 'itemsFiltered', function($scope, $routeParams, itemsFiltered) {
+	$scope.selectPage = function(newPage) {
+		$scope.selectedPage = newPage;
+	};
+})
+
+.controller('detailsCtrl', function($scope, $routeParams, itemsFiltered) {
 
 	$scope.artpieces = itemsFiltered.results;
 	$scope.whichItem = $routeParams.itemId;
@@ -52,4 +57,4 @@ angular.module('artpiecesCtrls', ['ngAnimate'])
 		$scope.nextItem = 0;
 	}
 
-}]);
+});

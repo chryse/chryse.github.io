@@ -314,7 +314,7 @@ a.small {
   min-width: 290px;
   max-width: 100%;
   margin: 0 auto;
-  margin-bottom: 30px;
+  /*margin-bottom: 30px; */
   /*border-radius: 0 0 20px 20px; */
   opacity: .95;
   z-index: 0;
@@ -343,6 +343,20 @@ a.small {
 
 .artpiece_list li:hover {
   background: #FDF6E3;
+}
+
+.page_btn_group {
+  background: #EEE8D5;
+  width: 50%;
+  min-width: 290px;
+  max-width: 100%;
+  margin: 0 auto;
+  opacity: .95;
+  z-index: 0;
+}
+
+.page_btn {
+  padding: 5px;
 }
 
 

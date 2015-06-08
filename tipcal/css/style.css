@@ -4,6 +4,7 @@ body {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	-webkit-text-size-adjust: none;
 	-webkit-user-select: none;
+	background-color: rgb(30, 30, 30);
 }
 
 a {
@@ -14,6 +15,21 @@ a:active, a:hover, a:focus {
 	text-decoration: none;
 	color: inherit;
 }
+
+input.form-control {
+	/*color: #eeeeee;*/
+	/*background-color: #a5f3ff;*/
+}
+/*
+input, input[placeholder] {
+	color: #eeeeee;
+}
+
+input::-webkit-input-placeholder { color: #eeeeee; }
+input::-moz-placeholder { color: #eeeeee; }
+input:-ms-input-placeholder { color: #eeeeee; }
+input:-moz-placeholder { color: #eeeeee; }
+*/
 
 input.ng-invalid.ng-dirty,
 option.ng-invalid.ng-dirty {
